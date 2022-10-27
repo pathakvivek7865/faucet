@@ -1,0 +1,15 @@
+truffle compile --contracts_build_directory=./src/assets/contracts
+
+truffle migrate --reset && truffle console
+
+const instance = await Faucet.deployed()
+
+instance.addFunds({value:"2000000000000000000", from: accounts[0]})
+instance.addFunds({value:"2000000000000000000", from: accounts[1]})
+instance.addFunds({value:"2000000000000000000", from: accounts[2]})
+
+instance.withdraw("1000000000000000000",{from: accounts[2]})
+
+
+
+web3.eth.sendTransaction({from:accounts[0],to: "0xA067A7dF805cfB2FE3E296DD6CB525F5F2D56076", data:"0xa26759cb", value:"3000000000000000000"})
