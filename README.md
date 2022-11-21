@@ -1,5 +1,5 @@
 # Faucet
-It is place(Ethereum local networ - Ganache) to donate funds by any user and withdraw by owner only.
+It is place(Ethereum local network - Ganache) to donate funds by any user and withdraw by owner only.
 
 ## Specifications
 - Truffle v5.4.6 (core: 5.4.6)
